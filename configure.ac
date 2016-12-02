@@ -1,11 +1,11 @@
-AC_INIT
+AC_INIT(libev,4.22,[],libev,[http://github.com/fnchooft/libev])
+AC_CONFIG_SRCDIR([ev_epoll.c])
+AM_INIT_AUTOMAKE
 
 orig_CFLAGS="$CFLAGS"
 
-AC_CONFIG_SRCDIR([ev_epoll.c])
 
 dnl also update ev.h!
-AM_INIT_AUTOMAKE(libev,4.22)
 AC_CONFIG_HEADERS([config.h])
 AM_MAINTAINER_MODE
 
@@ -24,4 +24,5 @@ AC_PROG_LIBTOOL
 m4_include([libev.m4])
 
 AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([$PACKAGE_NAME.pc:pc.in])
 AC_OUTPUT

@@ -2,6 +2,9 @@ AUTOMAKE_OPTIONS = foreign
 
 VERSION_INFO = 4:0:0
 
+pkgconfigdir = $(datadir)/pkgconfig
+pkgconfig_DATA = @PACKAGE_NAME@.pc
+
 EXTRA_DIST = LICENSE Changes libev.m4 autogen.sh \
 	     ev_vars.h ev_wrap.h \
 	     ev_epoll.c ev_select.c ev_poll.c ev_kqueue.c ev_port.c ev_win32.c \
