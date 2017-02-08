@@ -1,3 +1,6 @@
-#!/bin/sh
+#!/bin/sh -e
+test -n "$srcdir" || srcdir=`dirname "$0"`
+test -n "$srcdir" || srcdir=.
 
-autoreconf --install --symlink --force
+autoreconf --force --install --verbose "$srcdir"
+test -n "$NOCONFIGURE" || "$srcdir/configure" "$@"
