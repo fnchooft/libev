@@ -1,4 +1,4 @@
-AC_INIT(libev,4.22,[],libev,[http://github.com/fnchooft/libev])
+AC_INIT(libev,4.22.1,[],libev,[http://github.com/fnchooft/libev])
 AC_CONFIG_SRCDIR([ev_epoll.c])
 AM_INIT_AUTOMAKE
 
